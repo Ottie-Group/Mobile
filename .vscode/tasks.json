@@ -1,0 +1,60 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "📱 Android: Build & Install to Device",
+      "type": "shell",
+      "command": "cd ottie-mobile; bun run build; bunx cap sync android; cd android; .\\gradlew.bat assembleDebug; cd ..; adb install -r android/app/build/outputs/apk/debug/app-debug.apk; adb shell monkey -p com.ottie.vault 1",
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "presentation": {
+        "reveal": "always",
+        "panel": "shared",
+        "clear": true
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "📱 Android: Fast Sync Web Code",
+      "type": "shell",
+      "command": "cd ottie-mobile; bun run build; bunx cap sync android",
+      "presentation": {
+        "reveal": "always",
+        "panel": "shared"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "📱 Android: Open in Android Studio",
+      "type": "shell",
+      "command": "cd ottie-mobile; bunx cap open android",
+      "presentation": {
+        "reveal": "always",
+        "panel": "shared"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "📱 Android: Install Debug APK (ADB)",
+      "type": "shell",
+      "command": "adb install -r ottie-mobile/android/app/build/outputs/apk/debug/app-debug.apk; adb shell monkey -p com.ottie.vault 1",
+      "presentation": {
+        "reveal": "always",
+        "panel": "shared"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "📱 Android: View Live Logs (Logcat)",
+      "type": "shell",
+      "command": "adb logcat -s Capacitor/Console:D Chromium:I Ottie:D",
+      "presentation": {
+        "reveal": "always",
+        "panel": "shared"
+      },
+      "problemMatcher": []
+    }
+  ]
+}
