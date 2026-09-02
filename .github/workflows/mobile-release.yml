@@ -65,7 +65,7 @@ jobs:
           else
             cd android
           fi
-          ./gradlew assembleDebug assembleRelease \
+          ./gradlew assembleDebug assembleRelease -Dorg.gradle.java.home="$JAVA_HOME" \
             -PversionName="${{ steps.vars.outputs.version_name }}" \
             -PversionCode="${{ steps.vars.outputs.version_code }}"
 
