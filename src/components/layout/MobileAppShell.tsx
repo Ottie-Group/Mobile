@@ -98,7 +98,7 @@ export function MobileAppShell({ children, showNav = true, showHeader = true }: 
           <Styled.ModalCard onClick={(e) => e.stopPropagation()}>
             <Styled.ModalAvatar src="/static/ottie.svg" alt="Ottie" />
             <Styled.ModalTitle>Ottie 2FA</Styled.ModalTitle>
-            <Styled.ModalVersion>v1.0.0 Mobile Companion</Styled.ModalVersion>
+            <Styled.ModalVersion>v{__APP_VERSION__} Mobile Companion</Styled.ModalVersion>
             <Styled.ModalDescription>
               A private, self-hosted two-factor authentication companion. Keep your digital pebbles safely secured in your personal den.
             </Styled.ModalDescription>
