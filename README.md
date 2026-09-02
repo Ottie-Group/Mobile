@@ -8,7 +8,7 @@
 
 <p align="center">
   <a href="https://github.com/Ottie-Group/Mobile/actions">
-    <img src="https://img.shields.io/github/actions/workflow/status/Ottie-Group/Mobile/release.yml" />
+    <img src="https://img.shields.io/github/actions/workflow/status/Ottie-Group/Mobile/mobile-release.yml" />
   </a>
 
   <a href="https://github.com/Ottie-Group/Mobile/releases">
