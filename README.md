@@ -21,8 +21,8 @@
 ## Screenshots
 
 <p align="center">
-  <a href="assets/preview.png">
-    <img src="assets/preview.png" width="45%" alt="Dashboard" />
+  <a href="assets/Screenshot.jpg">
+    <img src="assets/Screenshot.jpg" width="45%" alt="Mobile Dashboard" />
   </a>
 </p>
 <p align="center">
