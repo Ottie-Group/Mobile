@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">Ottie</string>
+    <string name="title_activity_main">Ottie</string>
+    <string name="package_name">io.ottie.den</string>
+    <string name="custom_url_scheme">io.ottie.den</string>
+</resources>
