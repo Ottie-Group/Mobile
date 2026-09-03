@@ -1,3 +1,4 @@
+import { Capacitor } from '@capacitor/core';
 import { useServerStore } from '../store/useServerStore';
 import { storage } from '../services/storage';
 
@@ -33,9 +34,15 @@ export const api = {
       cachedCookie = await storage.get(COOKIE_KEY);
     }
 
+    const isNative = Capacitor.isNativePlatform();
+    const platform = Capacitor.getPlatform();
+
     const headers: Record<string, string> = {
       'Accept': 'application/json',
       'X-Requested-With': 'XMLHttpRequest',
+      'X-Ottie-Client': isNative ? 'companion' : 'web-companion',
+      'X-Ottie-Platform': platform,
+      'X-Ottie-Version': typeof __APP_VERSION__ !== 'undefined' ? __APP_VERSION__ : '1.0.1',
       ...(options.headers as Record<string, string> || {}),
     };
 
