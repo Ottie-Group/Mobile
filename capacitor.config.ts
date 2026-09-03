@@ -4,6 +4,7 @@ const config: CapacitorConfig = {
   appId: 'io.ottie.den',
   appName: 'Ottie',
   webDir: 'dist',
+  appendUserAgent: 'OttieCompanion/1.0.1 (io.ottie.den)',
   server: {
     androidScheme: 'http',
     cleartext: true,
